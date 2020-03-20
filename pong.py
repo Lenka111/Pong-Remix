@@ -101,11 +101,10 @@ pen.hideturtle()
 
 '''Changed the position of the player A and B score, because the border 
    is now visible and the text looks better when it's above it
-   Elena Voinu
 '''
 pen.goto(-20, 310)
 #pen.goto(0, 260) original position
-# Rearranged how the scores are displayed on the screen Elena Voinu
+# Rearranged how the scores are displayed on the screen 
 pen.write("PlayerA: 0 \t\t Sharapova: 0", align="center", font=("Courier", 24, "normal"))
 
 
@@ -126,7 +125,6 @@ def paddle_a_down():
 
 '''Commented out the up and down movement for paddle b
    since it's the computer playing now
-   Elena Voinu
 '''
 #def paddle_b_up():
    # y = paddle_b.ycor()
@@ -145,7 +143,7 @@ def paddle_a_down():
 wn.listen()
 # Changed the keys to move up and down for paddle A Elena Voinu
 # If run from Mac's terminal use onkey(), if run from windows change to
-#on keypress() for a smooth up and down movement @ Voinu
+#on keypress() for a smooth up and down movement
 wn.onkey(paddle_a_up, "Up")
 wn.onkey(paddle_a_down, "Down")
 
@@ -172,7 +170,7 @@ while True:
     if ball.xcor() > 350:
         score_a += 1
         pen.clear()
-        # rearranged how the scores are displayed on the screen, named computer player Sharapova:D Elena Voinu
+        # rearranged how the scores are displayed on the screen
         pen.write("PlayerA: {} \t\t Sharapova: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
         ball.goto(0, 0)
@@ -186,7 +184,7 @@ while True:
         ball.goto(0, 0)
         ball.dx *= -1
 
-    # move the computer player(paddle_b) Sharapova, by Elena Voinu
+    # move the computer player(paddle_b) 
     y = paddle_b.ycor()
     y += paddlebspeed
     paddle_b.sety(y)
@@ -202,12 +200,12 @@ while True:
         ball.dx *= -1
 
     # Ball and player collision
-    # Simplified the comparison Elena Voinu
+    # Simplified the comparison
     if (-340 > ball.xcor() > -350) and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
 
-    # display timer Elena Voinu
+    # display timer
     time_pen.undo()
     time_pen.write("Time: {}".format(round(time.time()- start_time)), False, align="Left", font=("Courier", 24, "normal"))
 
