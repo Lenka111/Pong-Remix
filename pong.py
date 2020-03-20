@@ -16,7 +16,7 @@ wn.bgcolor("dark green")
 wn.setup(width=800, height=700)
 wn.tracer(0)
 
-# set up the border added by Elena Voinu
+# set up the border 
 # added the lines 17 through 26, they weren't here initially
 border = turtle.Turtle(visible=False)
 border.color('white')
@@ -48,7 +48,7 @@ time_pen.write("Time  {} ".format(time.time()), False, align="center", font=("Co
 # Paddle A
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
-# added gif instead of shape for the paddle a Elena Voinu
+# added gif instead of shape for the paddle 
 paddle_a.shape("pong.gif")
 #paddle_a.shape("square")
 paddle_a.color("white")
@@ -62,7 +62,7 @@ paddleaspeed = 10
 # Paddle B computer player
 paddle_b = turtle.Turtle()
 paddle_b.speed(0)
-# added gif instead of shape for the paddle b Elena Voinu
+# added gif instead of shape for the paddle
 paddle_b.shape("pong.gif")
 #paddle_b.shape("square")
 paddle_b.color("white")
@@ -72,7 +72,7 @@ paddle_b.penup()
 paddle_b.goto(350, 0)
 paddle_b.showturtle()
 
-# Added the speed of the computer paddle Elena Voinu
+# Added the speed of the computer paddle 
 paddlebspeed = 15
 
 # Ball
@@ -86,7 +86,7 @@ ball.color("white")
 ball.penup()
 ball.showturtle()
 ball.goto(0, 0)
-# added the speed of the ball Elena Voinu
+# added the speed of the ball 
 ballspeed = 15
 ball.dx = 5
 ball.dy = 5
